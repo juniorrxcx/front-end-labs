@@ -1,30 +1,45 @@
+:root {
+    --color-base: #333333;
+    --color-base-figure-background: ghostwhite;
+    --color-base-figure-border:#CCC;
+    --font-base: "Roboto", sans-serif;
+    --font-base-primary: "Lora", serif;
+    --font-base-secondary: "Merriweather", serif;
+    --font-base-figcaption: "Gentium Plus", serif;
+}
+
 body {
-    color: #333333;
-    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    color: var(--color-base);
+    font-family: var(--font-base);
+    font-weight: 300;
     margin-left: auto;
     margin-right: auto;
     width: 940px
 }
 
 h1 {
+    font-family: var(--font-base-primary);
+    font-weight: 700;
     background-image: url(../img/sobre-background.jpg);
     padding: 10px;
 }
 
 h2 {
-    border-bottom: 2px groove #333333;
+    font-family: var(--font-base-secondary);
+    border-bottom: 2px groove var(--color-base);
     margin-top: 30px;
 }
 
 figure {
-    background-color: #F2EDED;
-    border: 1px solid #ccc;
+    background-color: var(--color-base-figure-background);
+    border: 1px solid var(--color-base-figure-border);
     text-align: center;
     padding: 15px;
     margin: 30px;
 }
 
 figcaption {
+    font-family: var(--font-base-figcaption);
     font-style: italic;
     margin-top: 10px;
 }
