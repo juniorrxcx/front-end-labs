@@ -8,6 +8,10 @@
     --font-base-figcaption: "Gentium Plus", serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: var(--color-base);
     font-family: var(--font-base);
