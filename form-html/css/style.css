@@ -88,3 +88,27 @@ i {
 h1, h2 {
     font-size: var(--font-size-large);
 }
+
+@media (max-width: 480px) {
+    body {
+        max-width: 480px;
+        font-size: 15px;
+        margin: 0px;
+        padding: 10px;
+        display: block;
+    }
+
+    .grid-button-container input[type=submit] {
+        font-size: 10px;
+        margin: auto; 
+     }
+
+    .grid-button-container input[type=reset] {
+       font-size: 10px;
+       margin: auto;
+    }
+
+    fieldset {
+        margin-bottom: 5px;
+    }
+} 
