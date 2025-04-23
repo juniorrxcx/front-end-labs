@@ -99,13 +99,23 @@ h1, h2 {
     }
 
     .grid-button-container input[type=submit] {
-        font-size: 10px;
-        margin: auto; 
+        font-size: 15px;
+        margin: 5px 0; 
      }
 
     .grid-button-container input[type=reset] {
-       font-size: 10px;
-       margin: auto;
+       font-size: 15px;
+       margin: 5px 0;
+    }
+
+    .grid-header-container {
+        display: flex;
+        grid-template-areas: 'top-left' 'top-right';
+        margin-bottom: 5px;
+    }
+
+    .flex-container {
+        display: flex;
     }
 
     fieldset {
