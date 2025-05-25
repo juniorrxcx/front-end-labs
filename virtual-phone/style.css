@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Candice';
+    src: url(fonts/Candice.TTF);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -8,9 +13,19 @@ body {
     align-items: center;
     flex-direction: column;
 
-    background-image: linear-gradient(to top,
-     rgba(0,0,0,0.2), rgba(0,0,0,0.8));
+    background-image: url('telephone-bckg.jpg');
+    background-size: cover;
     min-height: 100vh;
+    overflow: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    inset: 0; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(3px); 
+    z-index: -1; 
 }
 
 input {
@@ -18,13 +33,18 @@ input {
     color: inherit;
     font-size: inherit;
     font-weight: inherit;
-    font-family: inherit;
+    font-family: 'Vollkorn';
 }
 
 h1 {
-    font-family: monospace;
-    font-size: 2.5em;
-    color: cornsilk;
+    font-family: 'Candice';
+    font-size: 4em;
+    color: rgb(214, 75, 75);
+    -webkit-text-stroke: 1px rgb(203, 198, 113);
+
+    margin-top: 50px;
+    margin-bottom: 5px;
+    ;
 }
 
 .teclado {
@@ -33,37 +53,63 @@ h1 {
     gap: 10px;
     padding: 10px;
     border-radius: 30px;
-    background-color: floralwhite;
+    background-color: rgb(203, 198, 113);;
 }
 
 input[type=button] {
     border-radius: 20px;
     cursor: pointer;
-    font-family: monospace;
+    font-family: 'Candice';
     height: 80px;
     width: 80px;
     font-size: 30px;
+    background-color: rgb(214, 75, 75);
+    color: rgb(118, 39, 39);
 }
 
 input[type=button]:hover {
     font-weight: bold;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+    color: rgba(203, 198, 113, 0.847);
 }
 
 input[type=tel] {
-    background-color: floralwhite;
+    background-color: rgb(203, 198, 113);
     border-radius: 10px;
-    font-family: monospace;
+    font-family: 'Candice';
     font-size: 22px;
     height: 40px;
     margin-bottom: 25px;
     padding: 10px;
     text-align: center;
     width: 280px;
+    color: rgb(118, 39, 39);
+}
+
+input[type=tel]::placeholder {
+    color: rgb(88, 92, 58);
+    font-family: 'Candice';
+    font-size: 25px;
+    text-align: center;
+    opacity: 0.5;
 }
 
 .icon {
     cursor: pointer;
     padding: 5px;
-    margin-bottom: 10px;;
+    margin-bottom: 25px;;
+    margin-top: 0px;
+    font-size: 50px;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+    color: rgb(214, 75, 75);
+    font-family: 'Candice';
+    font-size: 1rem;
+    letter-spacing: 1.2px;
+    user-select: none;
+    opacity: 0.8;
 }
